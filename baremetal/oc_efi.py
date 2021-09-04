@@ -13,7 +13,7 @@ is_debug = os.environ.get('EFI_DEBUG', '') != ''
 #
 
 #
-# 1-1. OpenCore
+# 1-1. OpenCore and AMD Tweak
 # https://dortania.github.io/OpenCore-Install-Guide/installer-guide/opencore-efi.html
 #
 
@@ -34,6 +34,14 @@ for e in pathlib.Path(efi_root, 'EFI/OC/Tools/').iterdir():
     if e.name == 'OpenShell.efi':
         continue
     e.unlink()
+
+print('AMD_Vanilla...')
+amdvanilla_url = 'https://raw.githubusercontent.com/AMD-OSX/AMD_Vanilla/8ecef639781524ea18769ad33b556853c6643dd4/patches.plist'
+utils.FromFile(
+    amdvanilla_url,
+    amdvanilla_url,
+    str(pathlib.PurePath(efi_root, 'EFI/OC/')),
+).drop(is_debug)
 
 
 #
@@ -71,6 +79,7 @@ kextinfos = [
      'WhateverGreen.kext/'),
     ('https://github.com/acidanthera/AppleALC/releases/download/1.6.3/AppleALC-1.6.3-{}.zip', 'AppleALC.kext/'),
     ('https://github.com/acidanthera/NVMeFix/releases/download/1.0.9/NVMeFix-1.0.9-{}.zip', 'NVMeFix.kext/'),
+    ('https://github.com/USBToolBox/kext/releases/download/1.1.0/USBToolBox-1.0.1-{}.zip', 'USBToolBox.kext/'),
 ]
 
 for kinfo in kextinfos:
@@ -121,13 +130,5 @@ utils.FromZip(
 ).drop(is_debug)
 
 
-print('AMD_Vanilla...')
-amdvanilla_url = 'https://raw.githubusercontent.com/AMD-OSX/AMD_Vanilla/8ecef639781524ea18769ad33b556853c6643dd4/patches.plist'
-utils.FromFile(
-    amdvanilla_url,
-    amdvanilla_url,
-    str(pathlib.PurePath(efi_root, 'EFI/OC/')),
-).drop(is_debug)
-
-
+print('TODO: manually generate UTBMap.kext')
 print('TODO: complete config.plist')

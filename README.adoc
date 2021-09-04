@@ -7,6 +7,7 @@
 * https://github.com/corpnewt/USBMap[USBMap]
 * https://github.com/acidanthera/gfxutil[gfxutil]
 * https://github.com/darkguy2008/hotplugger[hotplugger]
+* https://www.reddit.com/r/hackintosh/comments/n2udl3/usbtoolbox%E1%B5%87%E1%B5%89%E1%B5%97%E1%B5%83_making_usb_mapping_simpler/[USBToolBox]
 
 == References
 * https://dortania.github.io/OpenCore-Install-Guide/[OpenCore Install Guide]

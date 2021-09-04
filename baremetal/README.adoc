@@ -9,6 +9,8 @@
 :url-AMCERD: https://github.com/acidanthera/bugtracker/files/3703498/AppleMCEReporterDisabler.kext.zip
 :url-NVMeFix: https://github.com/acidanthera/NVMeFix/releases/tag/1.0.9
 :url-SMCAMDProcessor: https://github.com/trulyspinach/SMCAMDProcessor/releases/tag/0.7
+:url-UTBtool: https://github.com/USBToolBox/tool/tree/0.0.9
+:url-UTBkext: https://github.com/USBToolBox/kext/tree/1.1.0
 :url-HfsPlus: https://github.com/acidanthera/OcBinaryData/blob/95b7d4ccb9fea6af48641fc1f5bd4b57f747b235/Drivers/HfsPlus.efi
 
 
@@ -23,6 +25,10 @@
 * {url-AMCERD}[AppleMCEReporterDisabler <no version>]
 * {url-NVMeFix}[NVMeFix 1.0.9]
 * {url-SMCAMDProcessor}[SMCAMDProcessor 0.7]
+* {url-UTBtool}[UTBMap 0.0.9]
+* {url-UTBkext}[USBToolBox 1.1.0]
 * {url-HfsPlus}[HfsPlus 95b7d4c]
 
 NOTE: `AMDRyzenCPUPowerManagement.kext` must come before `SMCAMDProcessor.kext` as it serves as a dependency.
+
+NOTE: You should generate `UTBMap.kext` manually.
