@@ -1,0 +1,13 @@
+= hackintosh!
+
+== Utilities
+* https://github.com/corpnewt/MountEFI[MountEFI]
+* https://github.com/corpnewt/ProperTree[ProperTree]
+* https://gist.github.com/scottrigby/4a3606491113224cbff325e9c8c73213[plistDiff]
+* https://github.com/corpnewt/USBMap[USBMap]
+* https://github.com/acidanthera/gfxutil[gfxutil]
+* https://github.com/darkguy2008/hotplugger[hotplugger]
+
+== References
+* https://dortania.github.io/OpenCore-Install-Guide/[OpenCore Install Guide]
+* https://github.com/johncolby/macOS-KVM[johncolby/macOS-KVM]
