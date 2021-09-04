@@ -60,8 +60,8 @@ utils.FromFile(
 print('SSDT-EC-USBX-DESKTOP.aml')
 ssdt_url = 'https://github.com/dortania/Getting-Started-With-ACPI/raw/master/extra-files/compiled/SSDT-EC-USBX-DESKTOP.aml'
 utils.FromFile(
-    hfsplus_url,
-    hfsplus_url,
+    ssdt_url,
+    ssdt_url,
     str(pathlib.PurePath(efi_root, 'EFI/OC/ACPI/')),
 ).drop(is_debug)
 
